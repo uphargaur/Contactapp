@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         // set the references of the declared objects above
         pager = findViewById(R.id.viewPager)
         tab = findViewById(R.id.tabs)
-        bar = findViewById(R.id.toolbar)
-        setSupportActionBar(bar)
+//        bar = findViewById(R.id.toolbar)
+//        setSupportActionBar(bar)
 
         val adapter = ViewPagerAdapter(supportFragmentManager)
 
