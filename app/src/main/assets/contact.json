@@ -1,0 +1,222 @@
+[
+  {
+    "firstName": "Aarav",
+    "lastName": "Kumar",
+    "mobileNumber": "+919876543210"
+  },
+  {
+    "firstName": "Aditi",
+    "lastName": "Sharma",
+    "mobileNumber": "+919812345678"
+  },
+  {
+    "firstName": "Akash",
+    "lastName": "Verma",
+    "mobileNumber": "+919823456789"
+  },
+  {
+    "firstName": "Amit",
+    "lastName": "Patel",
+    "mobileNumber": "+919834567890"
+  },
+  {
+    "firstName": "Anaya",
+    "lastName": "Gupta",
+    "mobileNumber": "+919845678901"
+  },
+  {
+    "firstName": "Anika",
+    "lastName": "Singh",
+    "mobileNumber": "+919856789012"
+  },
+  {
+    "firstName": "Arjun",
+    "lastName": "Shah",
+    "mobileNumber": "+919867890123"
+  },
+  {
+    "firstName": "Aryan",
+    "lastName": "Khan",
+    "mobileNumber": "+919878901234"
+  },
+  {
+    "firstName": "Avani",
+    "lastName": "Malhotra",
+    "mobileNumber": "+919889012345"
+  },
+  {
+    "firstName": "Chahat",
+    "lastName": "Agarwal",
+    "mobileNumber": "+919890123456"
+  },
+  {
+    "firstName": "Dhruv",
+    "lastName": "Chopra",
+    "mobileNumber": "+919901234567"
+  },
+  {
+    "firstName": "Divya",
+    "lastName": "Tiwari",
+    "mobileNumber": "+919912345678"
+  },
+  {
+    "firstName": "Ishaan",
+    "lastName": "Joshi",
+    "mobileNumber": "+919923456789"
+  },
+  {
+    "firstName": "Kabir",
+    "lastName": "Gupta",
+    "mobileNumber": "+919934567890"
+  },
+  {
+    "firstName": "Kavya",
+    "lastName": "Sharma",
+    "mobileNumber": "+919945678901"
+  },
+  {
+    "firstName": "Kiara",
+    "lastName": "Singhania",
+    "mobileNumber": "+919956789012"
+  },
+  {
+    "firstName": "Krish",
+    "lastName": "Malhotra",
+    "mobileNumber": "+919967890123"
+  },
+  {
+    "firstName": "Mahi",
+    "lastName": "Verma",
+    "mobileNumber": "+919978901234"
+  },
+  {
+    "firstName": "Manya",
+    "lastName": "Chopra",
+    "mobileNumber": "+919989012345"
+  },
+  {
+    "firstName": "Mehul",
+    "lastName": "Gupta",
+    "mobileNumber": "+919990123456"
+  },
+  {
+    "firstName": "Navya",
+    "lastName": "Sharma",
+    "mobileNumber": "+919901234567"
+  },
+  {
+    "firstName": "Neel",
+    "lastName": "Tiwari",
+    "mobileNumber": "+919912345678"
+  },
+  {
+    "firstName": "Nisha",
+    "lastName": "Joshi",
+    "mobileNumber": "+919923456789"
+  },
+  {
+    "firstName": "Ojas",
+    "lastName": "Gupta",
+    "mobileNumber": "+919934567890"
+  },
+  {
+    "firstName": "Pranav",
+    "lastName": "Sharma",
+    "mobileNumber": "+919945678901"
+  },
+  {
+    "firstName": "Prisha",
+    "lastName": "Singhania",
+    "mobileNumber": "+919956789012"
+  },
+  {
+    "firstName": "Rahul",
+    "lastName": "Malhotra",
+    "mobileNumber": "+919967890123"
+  },
+  {
+    "firstName": "Riya",
+    "lastName": "Verma",
+    "mobileNumber": "+919978901234"
+  },
+  {
+    "firstName": "Rudra",
+    "lastName": "Chopra",
+    "mobileNumber": "+919989012345"
+  },
+  {
+    "firstName": "Saanvi",
+    "lastName": "Gupta",
+    "mobileNumber": "+919990123456"
+  },
+  {
+    "firstName": "Sahil",
+    "lastName": "Sharma",
+    "mobileNumber": "+919901234567"
+  },
+  {
+    "firstName": "Samaira",
+    "lastName": "Tiwari",
+    "mobileNumber": "+919912345678"
+  },
+  {
+    "firstName": "Samay",
+    "lastName": "Joshi",
+    "mobileNumber": "+919923456789"
+  },
+  {
+    "firstName": "Sara",
+    "lastName": "Gupta",
+    "mobileNumber": "+919934567890"
+  },
+  {
+    "firstName": "Shanaya",
+    "lastName": "Sharma",
+    "mobileNumber": "+919945678901"
+  },
+  {
+    "firstName": "Shivansh",
+    "lastName": "Singhania",
+    "mobileNumber": "+919956789012"
+  },
+  {
+    "firstName": "Siya",
+    "lastName": "Malhotra",
+    "mobileNumber": "+919967890123"
+  },
+  {
+    "firstName": "Tanish",
+    "lastName": "Verma",
+    "mobileNumber": "+919978901234"
+  },
+  {
+    "firstName": "Tanya",
+    "lastName": "Chopra",
+    "mobileNumber": "+919989012345"
+  },
+  {
+    "firstName": "Utkarsh",
+    "lastName": "Gupta",
+    "mobileNumber": "+919990123456"
+  },
+  {
+    "firstName": "Ved",
+    "lastName": "Sharma",
+    "mobileNumber": "+919901234567"
+  },
+  {
+    "firstName": "Vivaan",
+    "lastName": "Tiwari",
+    "mobileNumber": "+919912345678"
+  },
+  {
+    "firstName": "Yash",
+    "lastName": "Joshi",
+    "mobileNumber": "+919923456789"
+  },
+  {
+    "firstName": "Zara",
+    "lastName": "Gupta",
+    "mobileNumber": "+919934567890"
+  }
+]
