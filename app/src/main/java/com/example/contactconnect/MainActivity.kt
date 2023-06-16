@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.example.contactconnect.Contactlist.ContactFragment
-import com.example.contactconnect.Message.Message_main
+import com.example.contactconnect.History.Message_main
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
@@ -19,8 +19,8 @@ class MainActivity : AppCompatActivity() {
         // set the references of the declared objects above
         pager = findViewById(R.id.viewPager)
         tab = findViewById(R.id.tabs)
-        bar = findViewById(R.id.toolbar)
-        setSupportActionBar(bar)
+//        bar = findViewById(R.id.toolbar)
+//        setSupportActionBar(bar)
 
         val adapter = ViewPagerAdapter(supportFragmentManager)
 
