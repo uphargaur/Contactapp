@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.viewpager.widget.ViewPager
 import com.example.contactconnect.Contactlist.ContactFragment
-import com.example.contactconnect.Message.Message_main
+import com.example.contactconnect.History.Message_main
 import com.google.android.material.tabs.TabLayout
 
 class MainActivity : AppCompatActivity() {
