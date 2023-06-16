@@ -7,10 +7,10 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
-import com.example.contactconnect.Contactlist.SendMessage.TwilioApiService
+import com.example.contactconnect.Contactlist.SendMessage.TwilioService
 import com.example.contactconnect.R
 import kotlinx.coroutines.launch
+import okhttp3.Credentials
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Callback
@@ -39,37 +39,28 @@ class contactinfo_activity : AppCompatActivity() {
         messagesend.setText(messagestring)
         sendbutton.setOnClickListener()
         {
-            val body = messagestring
-            val from ="+14026966904"
-            val to = Mobileno.toString()
-            val base64EncodedCredentials = "Basic " + Base64.encodeToString(
-                "$ACCOUNT_SID:$AUTH_TOKEN".toByteArray(),
-                Base64.NO_WRAP
+            val twilioService = createTwilioService()
+            val fromPhoneNumber ="+14026966904"
+            val toPhoneNumber = Mobileno.toString()
+
+            val call = twilioService.sendOtp(
+                fromPhoneNumber,
+                toPhoneNumber,
+                messagestring
             )
-            val data: MutableMap<String, String> = HashMap()
-            data["From"] = from
-            data["To"] = to
-            data["Body"] = body
-            val retrofit = Retrofit.Builder()
-                .baseUrl("https://api.twilio.com/2010-04-01/")
-                .build()
-            val twilioApi = retrofit.create(TwilioApiService::class.java)
-            twilioApi.sendMessage(ACCOUNT_SID, base64EncodedCredentials, data)
-                .enqueue(object : Callback<ResponseBody> {
-                    override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                        if (response.isSuccessful) {
-                            // API request successful
-                            println("Response successful")
-                        } else {
-                            // API request failed
-                            println("Response failed")
-                        }
+            call.enqueue(object : retrofit2.Callback<Any> {
+                override fun onResponse(call: Call<Any>, response: retrofit2.Response<Any>) {
+                    if (response.isSuccessful) {
+                        println("OTP sent successfully")
+                    } else {
+                        println("Failed to send OTP: ${response.code()}")
                     }
-                    override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                        // API request failed
-                        println("Request failed: ${t.message}")
-                    }
-                })
+                }
+
+                override fun onFailure(call: Call<Any>, t: Throwable) {
+                    println("Failed to send OTP: ${t.message}")
+                }
+            })
 
 
 
@@ -78,6 +69,20 @@ class contactinfo_activity : AppCompatActivity() {
 
     }
 
+    private fun createTwilioService(): TwilioService {
+        val credentials = Credentials.basic(ACCOUNT_SID, AUTH_TOKEN)
+
+        val retrofit = Retrofit.Builder()
+            .baseUrl("https://api.twilio.com/2010-04-01/")
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(okhttp3.OkHttpClient.Builder().addInterceptor { chain ->
+                val request = chain.request().newBuilder().header("Authorization", credentials).build()
+                chain.proceed(request)
+            }.build())
+            .build()
+
+        return retrofit.create(TwilioService::class.java)
+    }
 
     private fun generateOTP(): String {
         // Generate a random 6-digit number for OTP
