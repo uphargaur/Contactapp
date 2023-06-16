@@ -1,5 +1,7 @@
 # Contactapp
 BUILD A SIMPLE CONTACTS APP (WITH OTP SMS SENDING FUNCTIONALITY)
+# Contactapp
+BUILD A SIMPLE CONTACTS APP (WITH OTP SMS SENDING FUNCTIONALITY)
 
 # OTP Sending App
 
@@ -15,8 +17,10 @@ This is an Android application that allows users to send OTP (One-Time Password)
 
 ## Screenshots
 
-![Screenshot 1](Screenshot_2023-06-17-05-07-34-477_com.example.contactconnect.jpg)
-![Screenshot 2](Screenshot_2023-06-17-05-18-25-188_com.example.contactconnect.jpg)
+<p align="center">
+  <img src="Screenshot_2023-06-17-05-07-34-477_com.example.contactconnect.jpg" alt="Screenshot 1" width="300" />
+  <img src="Screenshot_2023-06-17-05-18-25-188_com.example.contactconnect.jpg" alt="Screenshot 2" width="300" />
+</p>
 
 ## Installation
 
