@@ -15,8 +15,8 @@ This is an Android application that allows users to send OTP (One-Time Password)
 
 ## Screenshots
 
-![Screenshot 1](/screenshots/screenshot1.png)
-![Screenshot 2](/screenshots/screenshot2.png)
+![Screenshot 1](Screenshot_2023-06-17-05-07-34-477_com.example.contactconnect.jpg)
+![Screenshot 2](Screenshot_2023-06-17-05-18-25-188_com.example.contactconnect.jpg)
 
 ## Installation
 
