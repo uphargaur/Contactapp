@@ -7,16 +7,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.contactconnect.Contactlist.SendMessage.TwilioService
+import com.example.contactconnect.Contactlist.SendMessage.createTwilioApiService
 import com.example.contactconnect.R
 import kotlinx.coroutines.launch
-import okhttp3.Credentials
-import okhttp3.ResponseBody
+import okhttp3.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
+import java.io.IOException
 
 
 class contactinfo_activity : AppCompatActivity() {
@@ -39,50 +37,38 @@ class contactinfo_activity : AppCompatActivity() {
         messagesend.setText(messagestring)
         sendbutton.setOnClickListener()
         {
-            val twilioService = createTwilioService()
-            val fromPhoneNumber ="+14026966904"
-            val toPhoneNumber = Mobileno.toString()
-
-            val call = twilioService.sendOtp(
-                fromPhoneNumber,
-                toPhoneNumber,
-                messagestring
-            )
-            call.enqueue(object : retrofit2.Callback<Any> {
-                override fun onResponse(call: Call<Any>, response: retrofit2.Response<Any>) {
-                    if (response.isSuccessful) {
-                        println("OTP sent successfully")
-                    } else {
-                        println("Failed to send OTP: ${response.code()}")
-                    }
-                }
-
-                override fun onFailure(call: Call<Any>, t: Throwable) {
-                    println("Failed to send OTP: ${t.message}")
-                }
-            })
-
-
+            sendSMS(Mobileno.toString(),messagestring)
 
         }
 
-
     }
 
-    private fun createTwilioService(): TwilioService {
-        val credentials = Credentials.basic(ACCOUNT_SID, AUTH_TOKEN)
 
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.twilio.com/2010-04-01/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(okhttp3.OkHttpClient.Builder().addInterceptor { chain ->
-                val request = chain.request().newBuilder().header("Authorization", credentials).build()
-                chain.proceed(request)
-            }.build())
-            .build()
 
-        return retrofit.create(TwilioService::class.java)
+
+    fun sendSMS(phoneNumber: String, message: String) {
+        val twilioService = createTwilioApiService()
+
+        val accountSid = "AC389ec42f42ee2e630c1d72ec9fe9990d"
+        val twilioPhoneNumber = "+14026966904"
+
+        val call = twilioService.sendSMS(accountSid,phoneNumber,twilioPhoneNumber,message)
+        call.enqueue(object : retrofit2.Callback<Void> {
+            override fun onResponse(call: Call<Void>, response: retrofit2.Response<Void>) {
+                if (response.isSuccessful) {
+                    println("SMS sent successfully!")
+                } else {
+                    println("Failed to send SMS: ${response.code()}")
+                }
+            }
+
+            override fun onFailure(call: Call<Void>, t: Throwable) {
+                println("Failed to send SMS: ${t.message}")
+            }
+        })
     }
+
+
 
     private fun generateOTP(): String {
         // Generate a random 6-digit number for OTP
