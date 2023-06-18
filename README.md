@@ -68,4 +68,15 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any inquiries or collaboration opportunities, please feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/uphargaur/).
+For any inquiries or collaboration opportunities, please feel free to reach out to me on
+
+## Connect with me
+
+<div align="center">
+<a href="https://github.com/uphargaur" target="_blank">
+<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+</a>
+<a href="https://www.linkedin.com/in/uphargaur/" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a> 
+</div> 
