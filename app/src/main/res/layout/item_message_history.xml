@@ -1,51 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
+        android:layout_height="match_parent"
+        app:cardCornerRadius="2dp"
+        android:backgroundTint="@android:color/black"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
-                android:id="@+id/textViewFirstName"
+                android:id="@+id/timestamp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="16sp"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
-
+                android:textSize="16sp" />
             <TextView
-                android:id="@+id/textViewLastName"
+                android:id="@+id/message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:textSize="16sp" />
-            <TextView
-                android:id="@+id/textViewMobileNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/white"
-                android:textSize="16sp" />
+
         </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/textotp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
-        <TextView
-            android:id="@+id/timestamp"
-            android:layout_gravity="end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            android:textSize="16sp" />
+    </androidx.cardview.widget.CardView>
+
+
+
+
 
     </LinearLayout>

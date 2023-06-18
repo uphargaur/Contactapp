@@ -1,4 +1,4 @@
-package com.example.contactconnect.Contactlist.SendMessage
+package com.example.contactconnect.Message.SendMessage
 
 import okhttp3.Credentials
 import okhttp3.OkHttpClient
@@ -19,7 +19,7 @@ interface TwilioApiService {
 }
 fun createTwilioApiService(): TwilioApiService {
     val accountSid ="AC389ec42f42ee2e630c1d72ec9fe9990d"
-    val authToken = "b710f4c70b5087fe107cafe64a158321"
+    val authToken = "25511ae88f290fd6421c3c2aaa37c833"
 
     val client = OkHttpClient.Builder()
         .addInterceptor { chain ->
