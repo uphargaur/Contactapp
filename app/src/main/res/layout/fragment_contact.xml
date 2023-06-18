@@ -4,9 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Contactlist.ContactFragment">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/white">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_light"
+            android:padding="10dp"
+            android:text="List of Comtacts" />
+    </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewContacts"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

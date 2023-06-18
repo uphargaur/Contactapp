@@ -42,7 +42,7 @@ class ContactListadapter(private val contactsList: List<personcontact>) :
             }
             context.startActivity(intent)
         }
-        println(currentitem.firstName)
+//        println(currentitem.firstName)
     }
 
     override fun getItemCount(): Int {
