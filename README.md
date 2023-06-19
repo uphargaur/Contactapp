@@ -1,5 +1,7 @@
 # Contactapp
- <img src="img.png" alt="App icon" width="300" />
+<div align="center">
+  <img src="img.png" alt="App icon" width="300" />
+</div>
  BUILD A SIMPLE CONTACTS APP (WITH OTP SMS SENDING FUNCTIONALITY)
 # Contactapp
 BUILD A SIMPLE CONTACTS APP (WITH OTP SMS SENDING FUNCTIONALITY)
